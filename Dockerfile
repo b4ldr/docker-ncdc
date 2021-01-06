@@ -18,7 +18,7 @@ RUN mkdir .gnupg && \
 RUN git clone https://aur.archlinux.org/ncdc.git && \
     cd ncdc && \
     makepkg --noconfirm --syncdeps --rmdeps --install --clean
-COPY .empty .ncd? /home/notroot/
+COPY .ncdc/ .
 ENTRYPOINT ["tmux", "new-session", "/usr/bin/ncdc"]
 
 

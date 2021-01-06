@@ -1,0 +1,2 @@
+# This directory will be copied to the docker image on build
+# useful to initialise with a db.sqlite3
