@@ -20,6 +20,7 @@ RUN git clone https://aur.archlinux.org/ncdc.git && \
     makepkg --noconfirm --syncdeps --rmdeps --install --clean
 COPY .ncdc/ .
 EXPOSE 4242
+VOLUME ["/home/notroot/.ncdc/dl", "/home/notroot/.ncdc/inc", "/mnt/share"]
 ENTRYPOINT ["tmux", "new-session", "/usr/bin/ncdc"]
 
 
