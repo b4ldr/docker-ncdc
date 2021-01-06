@@ -19,6 +19,7 @@ RUN git clone https://aur.archlinux.org/ncdc.git && \
     cd ncdc && \
     makepkg --noconfirm --syncdeps --rmdeps --install --clean
 COPY .ncdc/ .
+EXPOSE 4242
 ENTRYPOINT ["tmux", "new-session", "/usr/bin/ncdc"]
 
 
